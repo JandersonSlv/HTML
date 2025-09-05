@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de HTML e CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="indice">
+        <h2>Índice de Exercícios</h2>
+        <ul>
+            <li><a href="#listas">Questão 3: Listas</a></li>
+            <li><a href="#imagem">Questão 5: Imagem e Legenda</a></li>
+            <li><a href="#divs">Questão 6: Divs Estilizadas</a></li>
+            <li><a href="#paragrafo">Questão 7: Parágrafo Formatado</a></li>
+            <li><a href="#formulario">Questão 8: Formulário</a></li>
+            <li><a href="#tabela">Questão 9: Tabela</a></li>
+            <li><a href="#titulo-neon">Questão 10: Título Neon</a></li>
+        </ul>
+    </nav>
+
+    <section id="listas" class="container">
+        <h2>Questão 3: Listas</h2>
+        <h3>Minhas Metas Pessoais (Lista Ordenada)</h3>
+        <ol class="lista-colorida">
+            <li>Dominar JavaScript e um framework moderno.</li>
+            <li>Contribuir para um projeto de código aberto.</li>
+            <li>Conseguir minha primeira vaga como desenvolvedor júnior.</li>
+        </ol>
+
+        <h3>Meus Hobbies (Lista Não Ordenada)</h3>
+        <ul class="lista-colorida">
+            <li>Jogar videogame</li>
+            <li>Assistir séries e filmes</li>
+            <li>Estudar programação</li>
+            <li>Ouvir música</li>
+            <li>Caminhar ao ar livre</li>
+        </ul>
+    </section>
+
+    <section id="imagem" class="container">
+        <h2>Questão 5: Imagem e Legenda</h2>
+        <figure class="imagem-centralizada">
+            <img src="https://picsum.photos/600/300" alt="Imagem aleatória da internet">
+            <figcaption>Esta é uma imagem aleatória com uma legenda, centralizada via CSS.</figcaption>
+        </figure>
+    </section>
+
+    <section id="divs" class="container">
+        <h2>Questão 6: Divs Estilizadas</h2>
+        <div class="divs-container">
+            <div class="box box1">Div 1</div>
+            <div class="box box2">Div 2</div>
+            <div class="box box3">Div 3</div>
+        </div>
+    </section>
+
+    <section id="paragrafo" class="container">
+        <h2>Questão 7: Parágrafo Formatado</h2>
+        <p class="texto-longo">
+            Este parágrafo serve como exemplo de formatação avançada de texto utilizando CSS. A escolha de uma fonte diferente da padrão, como a 'Roboto', melhora a legibilidade e a estética da página. O aumento do tamanho da fonte e do espaçamento entre as linhas (line-height) evita que o texto pareça denso demais, tornando a leitura mais confortável para o usuário. Além disso, um sutil aumento no espaçamento entre as letras (letter-spacing) pode conferir um toque de elegância e clareza ao conjunto, demonstrando como pequenas alterações tipográficas podem ter um grande impacto na experiência do usuário final.
+        </p>
+    </section>
+
+    <section id="formulario" class="container">
+        <h2>Questão 8: Formulário de Cadastro</h2>
+        <form class="form-cadastro">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section id="tabela" class="container">
+        <h2>Questão 9: Tabela de Produtos</h2>
+        <table class="tabela-produtos">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Teclado Mecânico</td>
+                    <td>R$ 350,00</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Mouse Gamer</td>
+                    <td>R$ 180,00</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Headset 7.1</td>
+                    <td>R$ 420,00</td>
+                    <td>15</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="titulo-neon" class="container-full">
+        <h1 class="titulo-neon">Escola Virtual - Na Lógica</h1>
+    </section>
+    
+    <a href="index.html" class="link-navegacao voltar-link">Voltar para a Página Inicial</a>
+
+</body>
+</html>

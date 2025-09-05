@@ -1,0 +1,180 @@
+/* Importação de fonte para a Questão 7 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos Gerais */
+body {
+    background-color: #979797;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.container-full {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #bb86fc;
+}
+
+.link-navegacao {
+    display: inline-block;
+    margin-top: 20px;
+    color: #03dac6;
+    text-decoration: none;
+    font-weight: bold;
+}
+.link-navegacao:hover {
+    text-decoration: underline;
+}
+
+/* --- Questão 2: Formatação de Texto (sobre.html) --- */
+.texto-negrito { font-weight: bold; }
+.texto-italico { font-style: italic; }
+.texto-sublinhado { text-decoration: underline; }
+.texto-maiusculo { text-transform: uppercase; }
+
+/* --- Questão 3: Listas --- */
+.lista-colorida li {
+    color: #cf6679;
+}
+
+/* --- Questão 4: Índice --- */
+.indice {
+    background-color: #1e1e1e;
+    padding: 15px;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+.indice ul {
+    list-style: none;
+    padding: 0;
+}
+.indice li a {
+    color: #03dac6;
+    text-decoration: none;
+}
+
+/* --- Questão 5: Imagem --- */
+.imagem-centralizada {
+    text-align: center; /* Centraliza a imagem e a legenda */
+    margin: 0;
+}
+.imagem-centralizada img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.imagem-centralizada figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #aaa;
+}
+
+/* --- Questão 6: Divs Estilizadas --- */
+.divs-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.box {
+    width: 200px;
+    height: 100px;
+    border-radius: 15px; /* Bordas arredondadas */
+    text-align: center; /* Texto centralizado */
+    padding: 20px;
+    font-size: 1.2rem;
+    display: grid;
+    place-items: center;
+}
+.box1 { background-color: #d32f2f; }
+.box2 { background-color: #388e3c; }
+.box3 { background-color: #1976d2; }
+
+
+/* --- Questão 7: Parágrafo Formatado --- */
+.texto-longo {
+    font-family: 'Roboto', sans-serif; /* font-family diferente */
+    font-size: 18px; /* font-size variado */
+    line-height: 1.8; /* line-height maior */
+    letter-spacing: 0.5px; /* letter-spacing maior */
+}
+
+/* --- Questão 8: Formulário --- */
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form-cadastro input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px; /* Bordas arredondadas */
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+}
+.form-cadastro button {
+    width: 322px; /* 300px + padding */
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #bb86fc;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- Questão 9: Tabela --- */
+.tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tabela-produtos th, .tabela-produtos td {
+    border: 1px solid #555; /* Bordas */
+    padding: 12px; /* Espaçamento interno */
+    text-align: left;
+}
+.tabela-produtos thead th {
+    background-color: #6200ee; /* Cor de fundo no cabeçalho */
+    color: #fff;
+}
+.tabela-produtos tbody tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+/* --- Questão 10: Título Neon --- */
+.titulo-neon {
+    font-size: 3.5rem;
+    text-align: center; /* Alinhamento centralizado */
+    color: #fff;
+    /* Efeito de sombra (neon) */
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+}
+
+.voltar-link {
+    display: block;
+    text-align: center;
+    margin: 40px 0;
+}
