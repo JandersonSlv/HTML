@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 3</title>
+</head>
+<body>
+    <style>
+        body {margin: 0px auto;}
+        #enviar {
+            background-color: rgb(0, 255, 166);
+            color: rgb(0, 0, 0);
+            border-radius: 1px;
+            border: 2px solid rgb(51, 0, 255);
+            padding: 2px;
+            letter-spacing: 5px;
+        }
+    </style>
+    <ul id="menu">
+        <li><a href="#topo">Topo</a></li>
+        <li><a href="#meio">Meio</a></li>
+        <li><a href="#rodape">Rodapé</a></li>
+    </ul>
+    
+    <!-- Topo da página -->
+    <h1 id="topo">Inicio da página</h1>
+    <header>
+        <a href="https://www.google.com/?hl=pt_BR" target="_blank">Google</a> |
+        <a href="https://www.senaibahia.com.br/" target="_blank">Senai</a>
+    </header>
+    
+    <!-- Meio da página -->
+    <h1>Estou no meio da Página</h1>
+    <main>
+
+        <div id="formulario" 
+            style="border: 2px solid black; width: 300px; 
+            margin: auto; 
+            background-color: lightsalmon;
+            float: left;">
+            <br><br>
+        <form method="post" action="/contato" style="text-align: center;">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" placeholder="Digite seu nome">
+            <br><br>
+            <label for="email">Email</label>
+            <input type="text" name="email" placeholder="Digite seu email">
+            <br><br>
+            <input id= "enviar" type="submit" value="Enviar">
+            <br><br>
+        </form>
+        </div>
+        <br><br>
+
+        <div id="imagens" 
+            style="border: 2px solid black; width: 300px; 
+            margin: auto; 
+            background-color: lightblue;">
+            <br><br>
+            <h2 style="text-align: center;">Imagens</h2>
+            <br><br>
+
+        </div>
+        <br><br>
+
+        <img src="img/onepiece.jpg" alt="onepiece">
+        <img src="img/onepiece.jpg" alt="onepiece">
+    </main>
+
+    <!-- Rodapé da página -->
+    <h1 id="rodape">Estou no Rodapé da página</h1>
+    <footer>
+        <ul>
+            <li><a href="#topo">Topo</a></li>
+            <li><a href="#menu">Menu</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
