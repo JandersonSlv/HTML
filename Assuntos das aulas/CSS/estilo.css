@@ -1,0 +1,54 @@
+@keyframes camaleao {
+    0% {background: red;}
+    25% {background: yellow;}
+    50% {background: blue;}
+    75% {background: green;}
+    100% {background: red;}
+}
+
+@keyframes mover {
+    0% {transform: translateX(0px);}
+    50% {transform: translateX(100px) translateY(50px) scale(1.05);}
+    100% {transform: translateX(0px);}
+}
+
+
+#cama {
+    width: 200px;
+    height: 200px;
+    float: left;
+    animation: camaleao 4s infinite, mover 4s infinite;
+    box-shadow: 5px 5px 5px black;
+}
+
+
+
+#cores {
+    background-color: lightcoral;
+    width: 200px;
+    height: 200px;
+    float: left;
+    /*opacity: 0.7;*/
+    background: radial-gradient(circle, lightcoral, yellow, blue);
+    
+}
+
+#cores2 {
+    background: linear-gradient(to right,red, yellow, blue);
+    width: 200px;
+    height: 200px;
+    float: left;
+    box-shadow: 5px 5px 5px black;
+    margin: 10px;
+}
+
+#cores2:hover {
+    background: linear-gradient(to right,red, yellow, blue);
+    width: 200px;
+    height: 200px;
+    float: left;
+    box-shadow: 5px 5px 5px black;
+    transform: scale(1.05);
+    transition: all 0.3s;
+    margin: 10px;
+}
