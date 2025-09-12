@@ -1,160 +1,89 @@
-/* Importação da fonte e reset básico */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* --- Estilos Gerais --- */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f7f9fa;
-    color: #1c1d1f;
+    font-family: Arial, sans-serif; 
+    background-color: #f0f2f5;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
-
-/* --- Cabeçalho --- */
-.main-header {
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 1px solid #d1d7dc;
-}
-
-.logo img {
-    height: 34px;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    margin: 0;
 }
 
 /* --- Container do Login --- */
 .login-container {
-    display: flex;
-    justify-content: center;
+    background-color: #ffffff; 
+    padding: 40px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     width: 100%;
-    padding: 20px;
+    max-width: 400px; 
 }
 
-.login-form {
-    width: 100%;
-    max-width: 380px;
-    background-color: #fff;
-    padding: 24px;
-    margin-top: 30px;
-}
-
+/* --- Logo Marca --- */
 .login-form h1 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 24px;
-    text-align: left;
+    font-weight: bold;
+    color: #a435f0;
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 25px;
 }
 
-/* --- Botões de Login Social --- */
-.social-login-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 12px;
-    border: 1px solid #1c1d1f;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
-    transition: background-color 0.2s, color 0.2s;
+/* --- Título do Formulário --- */
+.login-form h2 {
+    margin-bottom: 25px; 
+    color: #333;
+    text-align: center;
 }
 
-.social-login-btn i {
-    margin-right: 12px;
-    font-size: 18px;
-}
-
-.google {
-    background-color: #fff;
-    color: #1c1d1f;
-}
-.google:hover { background-color: #f7f9fa; }
-
-.facebook {
-    background-color: #1877f2;
-    color: #fff;
-    border-color: #1877f2;
-}
-.facebook:hover { background-color: #166fe5; }
-
-.apple {
-    background-color: #000;
-    color: #fff;
-    border-color: #000;
-}
-.apple:hover { background-color: #333; }
-
-
-/* --- Formulário Principal --- */
+/* --- Grupo de Input (Label + Campo) --- */
 .input-group {
-    position: relative;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-.input-group i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #6a6f73;
+.input-group label {
+    display: block; 
+    margin-bottom: 5px; 
+    color: #555; 
 }
 
 .input-group input {
-    width: 100%;
-    padding: 12px 12px 12px 40px; /* Espaço para o ícone */
-    border: 1px solid #1c1d1f;
-    font-size: 16px;
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
 }
 
-.input-group input:focus {
-    outline: none;
-    border: 2px solid #a435f0;
-}
-
-.login-btn {
-    width: 100%;
+/* --- Botão de Login --- */
+button {
+    width: 100%; 
     padding: 12px;
-    background-color: #a435f0; /* Roxo da Udemy */
-    color: #fff;
-    border: none;
-    font-size: 16px;
-    font-weight: 700;
+    border: none; 
+    background-color: #007bff; 
+    color: white; 
+    border-radius: 4px; 
+    font-size: 16px; 
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s;
 }
 
-.login-btn:hover {
-    background-color: #8710d8;
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #0056b3; 
 }
 
-/* --- Rodapé do Formulário --- */
-.form-footer {
+/* --- Link para Registro --- */
+.register-link {
     text-align: center;
-    margin-top: 16px;
+    margin-top: 20px;
+    color: #777;
 }
 
-.forgot-password {
-    display: block;
-    margin-bottom: 16px;
-    color: #5624d0;
-    font-weight: 700;
+.register-link a {
+    color: #007bff;
     text-decoration: none;
 }
 
-.form-footer p {
-    font-size: 14px;
-}
-
-.signup-link {
-    color: #5624d0;
-    font-weight: 700;
-    text-decoration: none;
+.register-link a:hover {
+    text-decoration: underline;
 }
