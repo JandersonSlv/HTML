@@ -1,0 +1,67 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Container */
+.table-container {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.table-container h2 {
+  text-align: center;
+  color: #a435f0;
+  margin-bottom: 20px;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #a435f0;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hover nas linhas */
+tbody tr:hover {
+  background: #f1e0ff;
+}
+
+/* Linhas alternadas */
+tbody tr:nth-child(even) {
+  background: #f9f5ff;
+}
+
+/* Borda arredondada do cabeçalho e tabela */
+thead tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+thead tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
