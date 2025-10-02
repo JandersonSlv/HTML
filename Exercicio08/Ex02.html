@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar dois</title>
+</head>
+<body>
+    <h3>Soma de dois números</h3>
+
+    <input type="number" id="numero1" placeholder="Digite o primeiro numero">
+    <input type="number" id="numero2" placeholder="Digite o primeiro numero">
+    <button onclick="somanumero();">Soma</button>
+
+    <br>
+
+    <p id="somatotal"></p>
+    
+    <script>
+        function somanumero(){
+            let numero1 = Number(document.getElementById('numero1').value);
+            let numero2 = Number(document.getElementById('numero2').value);
+            let soma = numero1 + numero2;
+            document.getElementById("somatotal").innerText=soma;
+        }
+    </script>  
+</body>
+</html>

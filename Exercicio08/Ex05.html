@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Par ou Ímpar</title>
+</head>
+<body>
+
+    <h2>Verificador de Número Par ou Ímpar</h2>
+
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="verificarNumero()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificarNumero() {
+            // Pega o valor do campo de input e converte para número inteiro
+            let numeroInput = document.getElementById("numero").value;
+            let resultadoElement = document.getElementById("resultado");
+
+            // Verifica se o campo não está vazio
+            if (numeroInput.trim() === "") {
+                resultadoElement.innerText = "Por favor, digite um número.";
+                resultadoElement.style.color = "red";
+                return;
+            }
+            
+            let numero = parseInt(numeroInput);
+
+            // Verifica se o número é par usando o operador módulo (%)
+            // Se o resto da divisão por 2 for 0, o número é par.
+            if (numero % 2 === 0) {
+                resultadoElement.innerText = `O número ${numero} é PAR.`;
+                resultadoElement.style.color = "green";
+            } else {
+                resultadoElement.innerText = `O número ${numero} é ÍMPAR.`;
+                resultadoElement.style.color = "blue";
+            }
+        }
+    </script>
+
+</body>
+</html>
