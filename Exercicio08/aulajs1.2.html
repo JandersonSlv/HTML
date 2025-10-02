@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Inpt para digitar o nome -->
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <br>
+    <br>
+    <p id="escrevenome"> Aqui </p>
+    <br>
+    <br>
+    <!-- Botão para capturar o nome -->
+    <button onclick="peganome();">Captura nome</button>
+    <button onclick="document.getElementById('escrevenome').style.color=''"> Padrão </button>
+    <button onclick="document.getElementById('escrevenome').style.color='red'"> Vermelho </button>
+    <button onclick="document.getElementById('escrevenome').style.color='blue'"> Azul </button>
+    <button onclick="document.body.style.backgroundColor='blue'"> Página padrão </button>
+    <button onclick="document.body.style.backgroundColor='green'"> Página verde </button>
+
+    <select id="corfundo" onchange="mudarcor();">
+        <option value="">Padrão</option>
+        <option value="red">Vermelho</option>
+        <option value="blue">Azul</option>
+        <option value="yellow">Amarelo</option>
+        <option value="green">Verde</option>
+    </select>
+
+    <script>
+        function peganome(){
+            let nome = document.getElementById("nome").value;
+            alert("Olá "+nome+" Seja bem-vindo(a)");
+
+            // Captura nome e escreve na página
+            document.getElementById("escrevenome").innerText=nome;
+        }
+        function mudarcor(){
+            let cor = document.getElementById('corfundo').value;
+            document.body.style.backgroundColor = cor;
+        }
+    </script>
+</body>
+</html>

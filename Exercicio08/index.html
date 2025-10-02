@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>SENAI CIMATEC</h3>
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <button onclick="peganome();">Captura nome</button>
+    <br>
+    <p id="escrevenome"></p>
+    <br>
+    <h3>Calculadora</h3>
+    <input type="number" id="numero1" placeholder="Digite o primeiro numero">
+    <input type="number" id="numero2" placeholder="Digite o primeiro numero">
+    <button onclick="somanumero();">Soma</button>
+    <br>
+    <p id="somatotal"></p>
+    <script>
+        function peganome(){
+            let nome = document.getElementById("nome").value;
+            document.getElementById("escrevenome").innerText=nome;
+        }
+
+        function somanumero(){
+            let numero1 = Number(document.getElementById('numero1').value);
+            let numero2 = Number(document.getElementById('numero2').value);
+            let soma = numero1 + numero2;
+            document.getElementById("somatotal").innerText=soma;
+        }
+    </script>
+    
+</body>
+</html>
