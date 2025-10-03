@@ -1,16 +1,19 @@
-function calcimc(){
-    let nome = document.getElementById("nome").value.trim();
+function calcimc() {
+    let nomew = document.getElementById("nome").value.trim();
     let pesow = parseFloat(document.getElementById("peso").value);
     let alturaw = parseFloat(document.getElementById("altura").value);
     let classificacao;
-    
-    if (!nome) {
+
+    if (!nomew) {
         alert("Por favor, preencha o campo Nome.");
-        return
-        
+        return;
     }
-    if (isNaN(peso) || peso <= 0 || isNaN(altura) || altura <= 0) {
+    if (isNaN(pesow) || pesow <= 0) {
         alert("Por favor, insira um Peso válido (positivo e maior que zero).");
+        return;
+    }
+    if (isNaN(alturaw) || alturaw <= 0) {
+        alert("Por favor, insira uma Altura válida (positiva e maior que zero).");
         return;
     }
 
@@ -30,6 +33,6 @@ function calcimc(){
         classificacao = "Obesidade grau 3";
     }
 
-    document.getElementById("result").innerHTML = imc.toFixed(2);  
+    document.getElementById("result").innerHTML = `${nomew}, seu IMC é <strong>${imc.toFixed(2)}</strong> - ${classificacao}`;
 
 }
