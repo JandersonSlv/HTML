@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números primos:</title>
+</head>
+<body style="max-width:520px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial;">
+    <h1>Números primos de 1 a 100</h1>
+    <button onclick="numerosprimos();">Calcular</button>
+    <div id="resultado" style="max-width:520px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial;">O resultado aparecerá aqui</div>
+
+    <script>
+        function numerosprimos() {
+            let primos = "";
+            for (let i = 2; i <= 100; i++) {
+                let primo = true;
+                for (let j = 2; j * j <= i; j++) {
+                    if (i % j === 0) primo = false;
+    }
+    if (primo) primos += i + ", ";
+
+  }
+    document.getElementById('resultado').innerText = "Números primos de 1 a 100: " + primos;
+}
+    </script>
+    
+</body>
+</html>
+

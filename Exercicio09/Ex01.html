@@ -6,24 +6,25 @@
     <title>Estrutura de Repetição for</title>
 </head>
 <body style="max-width:520px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial;">
-    
     <h1>Tabuada completa</h1>
         <label for="numero">Digite um número:</label>    
         <input type="number" name="numero" id="numero" placeholder="Ex: 7">
         <button onclick="tabuada();">Calcular</button>
-
-        <pre id="resultado"></pre>
+        <div id="resultado" style="max-width:520px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial;"></div>
 
     <script>
         function tabuada(){
             let numero = parseInt(document.getElementById('numero').value);
+            if(isNaN(numero)){
+                alert("Por favor, digite um número válido.");
+                return;
+            }
             let resultado = "Tabuada do " + numero + ":\n\n";
             for(let i = 1; i <= 10; i++){
                 resultado +=`${numero} x ${i} = ${numero * i}\n`;
                 document.getElementById('resultado').innerText = resultado;
             }
         }
-
     </script>
 </body>
 </html>

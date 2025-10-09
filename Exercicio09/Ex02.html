@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soma de pares</title>
 </head>
-<body>
+<body style="max-width:520px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial;">
     <h1>Soma de pares</h1>
-    
+    <button onclick="somadepares();">Calcular</button>
+    <div id="resultado" style="max-width:520px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial;">O resultado aparecerá aqui</div>
+
+    <script>
+        function somadepares(){
+            let soma = 0;
+            for(let i = 1; i <= 100; i++){
+                if(i % 2 === 0){
+                    soma += i;
+                    document.getElementById('resultado').innerText = "A soma dos números pares de 1 a 100 é: " + soma;
+                }
+            }
+        }
+    </script>
 </body>
 </html>
