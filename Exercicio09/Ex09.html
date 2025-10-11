@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de vogais</title>
+</head>
+<body style="max-width:520px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial;">
+    <h1>Contagem de vogais</h1>
+    <input type="text" id = "palavra" placeholder="Digite uma palavra">
+    <button onclick="inversaoTexto()">Contagem</button>
+    <div id="resultado">O resultado aparecerá aqui</div>
+    <script>
+        function inversaoTexto() {
+        let frase = document.getElementById('palavra').value;
+        let contagem = 0;
+        for (let i = 0; i <= frase.length; i++) {
+            if (frase[i] === 'a' || frase[i] === 'e' || frase[i] === 'i' || frase[i] === 'o' || frase[i] === 'u' ||
+                frase[i] === 'A' || frase[i] === 'E' || frase[i] === 'I' || frase[i] === 'O' || frase[i] === 'U') {
+                contagem++;
+            }
+            document.getElementById('resultado').innerText = `Número de vogais: ${contagem}`;
+        }
+    }
+    </script>
+</body>
+</html>

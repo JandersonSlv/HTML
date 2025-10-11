@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de dígitos</title>
+</head>
+<body style="max-width:520px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial;">
+    <h1>Soma de dígitos</h1>
+    <input type="number" id = "numero" placeholder="Digite uma número">
+    <button onclick="somadigitos()">somar</button>
+    <div id="resultado">O resultado aparecerá aqui</div>
+    <script>
+        function somadigitos() {
+            let n1 = document.getElementById('numero').value;
+            let result = 0;
+            for (let i = 0; i < n1.length; i++) {
+                let digito = n1[i];
+                    result += digito - '0';
+            }
+            document.getElementById('resultado').innerText = `A soma dos dígitos é: ${result}`;
+        }
+    </script>
+    </script>
+</body>
+</html>

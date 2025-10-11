@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversão de texto</title>
+</head>
+<body style="max-width:520px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial;">
+    <h1>Inversão de texto</h1>
+    <input type="text" id = "palavra" placeholder="Digite uma palavra">
+    <button onclick="inversaoTexto()">Inverter</button>
+    <div id="resultado">O resultado aparecerá aqui</div>
+    <script>
+        function inversaoTexto() {
+        let palavra = document.getElementById('palavra').value;
+        let palavraInvertida = "";
+        for (let i = palavra.length - 1; i >= 0; i--) {
+            palavraInvertida += palavra[i];
+            document.getElementById('resultado').innerText = `Palavra invertida: ${palavraInvertida}`;
+        }
+    }
+    </script>
+</body>
+</html>

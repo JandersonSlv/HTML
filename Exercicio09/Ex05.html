@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem regressiva:</title>
+</head>
+<body style="max-width:520px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial;">
+
+    <h1>Contagem regressiva</h1>
+
+    <input type="number" id ="numero" placeholder="Digite um número">
+
+    <button onclick="contagem();">Contagem</button>
+
+    <div id="resultado">O resultado aparecerá aqui</div>
+    
+    <script>
+        function contagem() {
+            let n1 = document.getElementById('numero').value;
+            let result = "";
+            for (let i = n1; i >= 1; i--) {
+                result += `${i}, `;
+                document.getElementById('resultado').innerText = `Contagem regressiva: ${result}`;
+        }
+    }
+    </script>
+    
+</body>
+</html>

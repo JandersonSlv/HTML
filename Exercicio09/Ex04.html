@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequência de Fibonacci</title>
+</head>
+<body style="max-width:520px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial;">
+    <h1>Sequência de Fibonacci até 15</h1>
+    <button onclick="fibonacci();">Calcular</button>
+    <div id="resultado">O resultado aparecerá aqui</div>
+    <script>
+        function fibonacci() {
+            let fib = "";
+            let n1 = 0, n2 = 1, fibs = 0;
+            for (let i = 2; i < 15; i++) {
+            fibs = n1 + n2;
+            n1 = n2;
+            n2 = fibs;
+            fib += `${n1} `;
+            }
+            document.getElementById('resultado').innerText = `Sequência de Fibonacci até 15: ${fib}`;
+        }
+    </script>
+</body>
+</html>
