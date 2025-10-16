@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = resultado>Imprimir vetor</p>
+    <input type="number" id = "vet1" placeholder="Digite um número">
+    <button onclick="imprimirvet()";>Gerar</button> <br> <br>
+    
+     <p id = resultado2>Imprimir vetpar</p>
+    <button onclick="imprimirvet2()";>Vetpar</button> <br> <br>
+
+    <script>
+        function imprimirvet() {
+            let vetor = [];
+            let tam = document.getElementById('vet1').value;
+            for (let i = 1; i <= tam; i++) {
+                if (i % 2 == 0) {
+                    vetor.push(i);
+                }
+            } document.getElementById('resultado').innerHTML = `Números pares: ${vetor}`;
+        }
+
+        function imprimirvet2() {
+            let vetpar = [71, 55, 30, 11, 22, 10, 35, 63, 7, 5];
+            let tamanho = vetpar.length;
+            for (let x = 1; x <= tamanho; x++) {
+                document.getElementById('resultado2').innerHTML = `Meu vetor é: ${vetpar}`;
+                //vetpar.pull[4];
+            }
+
+        }
+    </script>
+</body>
+</html>

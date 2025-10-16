@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro vetor</title>
+</head>
+<body style="max-width:520px;margin:40px auto;font-family:system-ui,Segoe UI,Roboto,Arial;">
+
+    <form onsubmit="Cadastrar(); return false;">
+        <h1>Cadastro</h1>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome"> <br>
+        <input type="text" name="email" id="email" placeholder="Digite seu e-mail"> <br> <br>
+        <button type="submit">Cadastrar</button>
+        <button type="button" onclick="consulta();">Consulta</button>
+    </form><br><br>
+
+    <div id="resultador">
+    
+    O resultado aparecerá aqui
+
+    </div>
+
+    <script>
+
+        let cadastro = [];
+
+        function Cadastrar() {
+            let nome = document.getElementById('nome').value;
+            let email = document.getElementById('email').value;
+
+            if (nome == "" || email == "") {
+                alert ("Preencha todos os campos");
+                return;
+            }
+            
+            let dados = nome + ", " + email;
+            cadastro.push(dados);
+            console.log(cadastro);
+
+            //document.getElementById('resultador').innerHTML = cadastro; 
+        }
+
+        function consulta() {
+            document.getElementById('resultador').innerHTML = cadastro; 
+        }
+
+    </script>
+</body>
+</html>
