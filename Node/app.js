@@ -35,6 +35,24 @@ app.get('/',(req, res) => {
 });
 
 
+//Página de busca
+app.get('/busca',(req, res) => {
+    res.sendFile(path.join(__dirname, 'public','busca.html'));
+});
+
+
+//API de busca por nome
+app.get('/api/buscar', (req, res) => {
+    const {nome} = req.query;
+    if(!nome) return res.json([]);
+    const sql = 'SELECT * FROM usuarios WHERE nome LIKE ?';
+    connection.query(sql, [`%${nome}%`], (err, results) => {
+        if (err) return res.status(500).json({error: 'Erro ao buscar no banco.'});
+        res.json(results);
+    });
+});
+
+
 // Rota para receber o POST do formulário
 app.post('/salvar', (req, res) => {
     const {nome, email, telefone} = req.body;
@@ -48,6 +66,8 @@ app.post('/salvar', (req, res) => {
     });
 });
 
-
-// Iniciar o servidor
+// Iniciar o servidor (Página de cadastro)
 app.listen(3031, () => console.log('Servidor rodando em http://localhost:3031'));
+
+// Iniciar o servidor (Página de busca)
+app.listen(3031, () => console.log('Servidor rodando em http://localhost:3031/busca'));
