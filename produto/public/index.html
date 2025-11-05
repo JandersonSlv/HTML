@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Produtos</h1>
+
+        <form id="produtoForm">
+            <input type="text" id="nome" placeholder="Nome do produto" required>
+            <input type="text" id="descricao" placeholder="Descrição do produto">
+            <input type="number" id="preco" placeholder="Preço" step="0.01" required>
+            <button type="submit">Cadastrar Produto</button>
+        </form>
+
+        <h2>Lista de Produtos</h2>
+        <table id="tabelaProdutos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Produtos vão aparecer aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const form = document.getElementById('produtoForm');
+        const tabela = document.getElementById('tabelaProdutos').querySelector('tbody');
+
+        // Função para listar produtos
+        async function listarProdutos() {
+            const res = await fetch('/produtos');
+            const produtos = await res.json();
+            tabela.innerHTML = '';
+            produtos.forEach(p => {
+                const row = tabela.insertRow();
+                row.insertCell(0).textContent = p.id;
+                row.insertCell(1).textContent = p.nome;
+                row.insertCell(2).textContent = p.descricao;
+                row.insertCell(3).textContent = p.preco.toFixed(2);
+            });
+        }
+
+        // Enviar formulário
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const produto = {
+                nome: document.getElementById('nome').value,
+                descricao: document.getElementById('descricao').value,
+                preco: parseFloat(document.getElementById('preco').value)
+            };
+
+            await fetch('/produtos', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(produto)
+            });
+
+            form.reset();
+            listarProdutos();
+        });
+
+        listarProdutos();
+    </script>
+</body>
+</html>
